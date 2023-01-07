@@ -1,14 +1,14 @@
 package org.example.Radio;
 
 public class Radio {
-    public int currentRadioStation;
+
+    private int currentRadioStation;
+    private int currentVolume;
+
 
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
-
-    public int currentVolume;
-
 
     public void setCurrentRadioStation(int currentStation) {
 

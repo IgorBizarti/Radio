@@ -12,7 +12,7 @@ class RadioTest {
         freq.setCurrentRadioStation(9);
 
         int expected = 9;
-        int actual = freq.currentRadioStation;
+        int actual = freq.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -24,7 +24,7 @@ class RadioTest {
         freq.setCurrentRadioStation(11);
 
         int expected = 0;
-        int actual = freq.currentRadioStation;
+        int actual = freq.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -38,7 +38,7 @@ class RadioTest {
         freq.next();
 
         int expected = 5;
-        int actual = freq.currentRadioStation;
+        int actual = freq.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
 
@@ -53,7 +53,7 @@ class RadioTest {
         freq.next();
 
         int expected = 0;
-        int actual = freq.currentRadioStation;
+        int actual = freq.getCurrentRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -108,7 +108,7 @@ class RadioTest {
 
         freq.setCurrentRadioStation(-1);
         int expected = 0;
-        int actual = freq.currentRadioStation;
+        int actual = freq.getCurrentRadioStation();
 
         Assertions.assertEquals(expected,actual);
     }
