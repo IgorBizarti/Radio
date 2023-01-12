@@ -5,10 +5,21 @@ import org.junit.jupiter.api.Test;
 
 class RadioTest {
 
+
+    @Test
+
+    public void numberRadioStations() {
+        Radio freq = new Radio(10);
+
+        int expected = 9;
+        int actual = freq.getCurrentRadioStation();
+    }
+
     @Test
 
     public void test() {
-        Radio freq = new Radio();
+        Radio freq = new Radio(9);
+        freq.setCurrentRadioStation(9);
 
         int expected = 9;
         int actual = freq.getCurrentRadioStation();
@@ -54,7 +65,7 @@ class RadioTest {
     @Test
 
     public void currentRadioStation() {
-        Radio freq = new Radio(10);
+        Radio freq = new Radio(9);
         freq.setCurrentRadioStation(0);
 
         int expected = 0;
@@ -80,7 +91,6 @@ class RadioTest {
 
     public void nextStation() {
         Radio freq = new Radio(10);
-
         freq.setCurrentRadioStation(4);
         freq.next();
 
